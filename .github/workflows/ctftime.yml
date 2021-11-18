@@ -35,5 +35,6 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DiscordWebhookUrl }}
         run: |
           python -m pip install --upgrade pip
+          python -m pip install numpy
           pip install -r CTFtime-Discord-hooks/requirements.txt
           python CTFtime-Discord-hooks/CTFtimeDiscordHooks.py -w "$DISCORD_WEBHOOK_URL" -d 7 -c ctftime_cache -m 5
